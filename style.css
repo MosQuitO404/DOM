@@ -31,6 +31,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    overflow-x: hidden;
 }
 
 @media screen and (max-width: 1480px) {
@@ -82,6 +83,8 @@ body {
         max-width: 330px;
         min-width: 330px;
         margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
         margin-bottom: 20px;
         opacity: 100%;
         z-index: 100;
@@ -329,14 +332,13 @@ body {
         position: fixed;
         justify-content: center;
         align-items: flex-start;
-        top: 100px;
         top: -100%;
         width: 330px;
-        height: 470px;
+        height: 100%;
         background-color: #15151E;
         transition: 0.4s;
         z-index: 99;
-        padding-top: 80px;
+        padding-top: 100px;
     }
     .popup.open {
         top: 0;
@@ -351,7 +353,7 @@ body {
         grid-column-start: 1;
     }
     .popup .menu-team {
-        margin: 10px;
+        margin: 15px 10px;
         max-width: 135px;    
     }
     .hamb-field.active .bar:nth-child(2) {
@@ -397,6 +399,8 @@ body {
     .pilot-wrapper {
         margin-top: 0;
         min-width: 330px;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -425,7 +429,9 @@ body {
 @media screen and (max-width: 739px) {
     .team-info-container {
         max-width: 330px;
-        min-width: 330px; 
+        min-width: 330px;
+        margin-left: 0;
+        margin-right: 0; 
     }
 }
 
