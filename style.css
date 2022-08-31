@@ -20,6 +20,13 @@ html {
     max-width: 1520px;
 }
 
+@media screen and (max-width: 739px) {
+    html {
+        background-image: none;
+        background-color: #1b1b2b;
+    }
+}
+
 body {
     display: flex;
     justify-content: space-between;
