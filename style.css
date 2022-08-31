@@ -20,7 +20,7 @@ html {
     max-width: 1520px;
 }
 
-@media screen and (max-width: 739px) {
+@media screen and (max-width: 740px) {
     html {
         background-image: none;
         background-color: #1b1b2b;
@@ -41,7 +41,7 @@ body {
     }
 }
 
-@media screen and (max-width: 739px) {
+@media screen and (max-width: 740px) {
     body {
         padding: 100px;
     }
@@ -69,19 +69,19 @@ body {
     }
 }
 
-@media screen and (max-width: 1346px) {
+@media screen and (max-width: 1350px) {
     .header-container {
         font-size: 20px;
         max-width: 700px;
     }
 }
 
-@media screen and (max-width: 739px) {
+@media screen and (max-width: 740px) {
     .header-container {
         position: fixed;
         top: 0;
-        max-width: 330px;
-        min-width: 330px;
+        max-width: 360px;
+        min-width: 350px;
         margin-top: 0;
         margin-left: 0;
         margin-right: 0;
@@ -97,7 +97,7 @@ body {
     margin: 0px 124px 0px 50px;
 }
 
-@media screen and (max-width: 739px) {
+@media screen and (max-width: 740px) {
     .header-title {
         white-space: normal;
         text-align: center;
@@ -113,9 +113,9 @@ body {
     margin: 0px 40px;
 }
 
-@media screen and (max-width: 739px) {
+@media screen and (max-width: 740px) {
     .logo-img {
-        margin: 0px 0px 0px 7px;
+        margin: 0px 7px 0px 7px;
     }
 }
 
@@ -156,7 +156,7 @@ body {
     }
 }
 
-@media screen and (max-width: 1346px) {
+@media screen and (max-width: 1350px) {
     .menu-container {
         grid-template-columns: repeat(4,1fr);
         grid-template-rows: repeat(3,1fr);
@@ -176,7 +176,7 @@ body {
     max-width: 230px;
 }
 
-@media screen and (max-width: 1346px) {
+@media screen and (max-width: 1350px) {
     .menu-team {
         margin: 10px;
         max-width: 150px;    
@@ -190,7 +190,7 @@ body {
     transform: translateX(20px);
 }
 
-@media screen and (max-width: 1346px) {
+@media screen and (max-width: 1350px) {
     .menu-team:hover .car-img {
         transform: translateX(15px);
     }
@@ -202,7 +202,7 @@ body {
     transform: translateX(10px);
 }
 
-@media screen and (max-width: 1346px) {
+@media screen and (max-width: 1350px) {
     .menu-team:hover {
         transform: translateX(5px);
     }
@@ -212,7 +212,7 @@ body {
     transform: translateX(20px);
 }
 
-@media screen and (max-width: 1346px) {
+@media screen and (max-width: 1350px) {
     .menu-team:focus .car-img {
         transform: translateX(15px);
     }
@@ -224,7 +224,7 @@ body {
     outline: none;
 }
 
-@media screen and (max-width: 1346px) {
+@media screen and (max-width: 1350px) {
     .menu-team:focus {
         transform: translateX(5px);
     }
@@ -240,7 +240,7 @@ body {
     text-decoration: none;
 }
 
-@media screen and (max-width: 1346px) {
+@media screen and (max-width: 1350px) {
     .menu-team-title {
         font-size: 14px;
         line-height: 14px;
@@ -255,7 +255,7 @@ body {
     font-weight: 600;
 }
 
-@media screen and (max-width: 1346px) {
+@media screen and (max-width: 1350px) {
     .menu-team-title::after {
         right: 5px;
         font-weight: 400;
@@ -268,7 +268,7 @@ body {
     padding-right: 66px;
 }
 
-@media screen and (max-width: 1346px) {
+@media screen and (max-width: 1350px) {
     .menu-team-img-wrapper {
         padding-right: 40px;
     }
@@ -284,7 +284,7 @@ body {
     height: 16px;
 }
 
-@media screen and (max-width: 1346px) {
+@media screen and (max-width: 1350px) {
     .menu-team-img-wrapper::before {
         top: 12px;
         width: 30px;
@@ -298,13 +298,13 @@ body {
     transition: all .2s ease-out;
 }
 
-@media screen and (max-width: 1346px) {
+@media screen and (max-width: 1350px) {
     .car-img {
         max-width: 110px;
     }
 }
 
-@media screen and (max-width: 739px) {
+@media screen and (max-width: 740px) {
     body .menu-container {
         display: none;
     }
@@ -333,7 +333,7 @@ body {
         justify-content: center;
         align-items: flex-start;
         top: -100%;
-        width: 330px;
+        width: 360px;
         height: 100%;
         background-color: #15151E;
         transition: 0.4s;
@@ -395,12 +395,13 @@ body {
     padding-bottom: 10px;
 }
 
-@media screen and (max-width: 739px) {
+@media screen and (max-width: 740px) {
     .pilot-wrapper {
         margin-top: 0;
-        min-width: 330px;
+        max-width: 360px;
         margin-left: 0;
         margin-right: 0;
+        padding-bottom: 0;
     }
 }
 
@@ -412,6 +413,13 @@ body {
 
 .pilot-img {
     max-width: 300px;
+}
+
+@media screen and (max-width: 740px) {
+    .pilot-img {
+        max-width: 350px;
+        padding: 10px;
+    }
 }
 
 .team-info-container {
@@ -426,10 +434,10 @@ body {
     margin: 0px 20px;
 }
 
-@media screen and (max-width: 739px) {
+@media screen and (max-width: 740px) {
     .team-info-container {
-        max-width: 330px;
-        min-width: 330px;
+        max-width: 360px;
+        min-width: 360px;
         margin-left: 0;
         margin-right: 0; 
     }
