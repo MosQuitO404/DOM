@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+html {
+    background-image: url(./teams_img/ferrari-sf15-t-formula-1-f1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-width: 375px;
+    max-width: 1520px;
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 1480px) {
+    body {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 739px) {
+    body {
+        padding: 100px;
+    }
+}
+
+.header-container {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #ffff;
+    background-color: #E10600;
+    font-style: italic;
+    font-size: 22px;
+    opacity: 90%;
+    margin: 20px;
+    max-width: 700px;
+}
+
+@media screen and (max-width: 1480px) {
+    .header-container {
+        flex-basis: 100%;
+        margin-bottom: 0;
+        max-width: none;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1346px) {
+    .header-container {
+        font-size: 20px;
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-width: 739px) {
+    .header-container {
+        position: fixed;
+        top: 0;
+        max-width: 330px;
+        min-width: 330px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        opacity: 100%;
+        z-index: 100;
+    }
+}
+
+.header-title {
+    white-space: nowrap;
+    text-align: center;
+    margin: 0px 124px 0px 50px;
+}
+
+@media screen and (max-width: 739px) {
+    .header-title {
+        white-space: normal;
+        text-align: center;
+        font-size: 12px;
+        line-height: 30px;
+        margin: 0;
+    }
+}
+
+.logo-img {
+    max-width: 80px;
+    vertical-align: middle;
+    margin: 0px 40px;
+}
+
+@media screen and (max-width: 739px) {
+    .logo-img {
+        margin: 0px 0px 0px 7px;
+    }
+}
+
+.hamb-wrapper {
+    display: none;
+}
+
+.popup {
+    display: none;
+}
+
+.menu-container {
+    position: absolute;
+    left: 0px;
+    top: 120px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(5,1fr);
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: #15151E;
+    text-decoration: none;
+    list-style: none;
+    opacity: 90%;
+    margin: 0px 20px;
+    padding: 30px 97px;
+}
+
+@media screen and (max-width: 1480px) {
+    .menu-container {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin: 20px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 1346px) {
+    .menu-container {
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(3,1fr);
+        padding: 10px;
+        margin-bottom: 0;
+    }
+}
+
+.menu-team {
+    display: block;
+    border: 2px solid #67676d;
+    border-top: 0;
+    border-left: 0;
+    border-bottom-right-radius: 10px;
+    transition: all .2s ease-out;
+    margin: 10px 15px;
+    max-width: 230px;
+}
+
+@media screen and (max-width: 1346px) {
+    .menu-team {
+        margin: 10px;
+        max-width: 150px;    
+    }
+    .menu-team:nth-child(9) {
+        grid-column-start: 2;
+    }
+}
+
+.menu-team:hover .car-img {
+    transform: translateX(20px);
+}
+
+@media screen and (max-width: 1346px) {
+    .menu-team:hover .car-img {
+        transform: translateX(15px);
+    }
+}
+
+.menu-team:hover {
+    border-color: currentColor;
+    cursor: pointer;
+    transform: translateX(10px);
+}
+
+@media screen and (max-width: 1346px) {
+    .menu-team:hover {
+        transform: translateX(5px);
+    }
+}
+
+.menu-team:focus .car-img {
+    transform: translateX(20px);
+}
+
+@media screen and (max-width: 1346px) {
+    .menu-team:focus .car-img {
+        transform: translateX(15px);
+    }
+}
+
+.menu-team:focus {
+    border-color: currentColor;
+    transform: translateX(10px);
+    outline: none;
+}
+
+@media screen and (max-width: 1346px) {
+    .menu-team:focus {
+        transform: translateX(5px);
+    }
+}
+
+.menu-team-title {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    line-height: 18px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1346px) {
+    .menu-team-title {
+        font-size: 14px;
+        line-height: 14px;
+    }
+}
+
+.menu-team-title::after {
+    position: absolute;
+    content: '+';
+    right: 10px;
+    top: 0;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1346px) {
+    .menu-team-title::after {
+        right: 5px;
+        font-weight: 400;
+    }
+}
+
+.menu-team-img-wrapper {
+    display: inline-block;
+    position: relative;
+    padding-right: 66px;
+}
+
+@media screen and (max-width: 1346px) {
+    .menu-team-img-wrapper {
+        padding-right: 40px;
+    }
+}
+
+.menu-team-img-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 17px;
+    left: 0;
+    background: currentColor;
+    width: 50px;
+    height: 16px;
+}
+
+@media screen and (max-width: 1346px) {
+    .menu-team-img-wrapper::before {
+        top: 12px;
+        width: 30px;
+        height: 11px;
+    }
+}
+
+.car-img {
+    max-width: 155px;
+    position: relative;
+    transition: all .2s ease-out;
+}
+
+@media screen and (max-width: 1346px) {
+    .car-img {
+        max-width: 110px;
+    }
+}
+
+@media screen and (max-width: 739px) {
+    body .menu-container {
+        display: none;
+    }
+    body.noscroll {
+        overflow: hidden;
+    }
+    .hamb-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    .hamb-field {
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    .bar {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 6px auto;
+        background-color: #ffff;
+        transition: 0.2s;
+    }
+    .popup {
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        align-items: flex-start;
+        top: 100px;
+        top: -100%;
+        width: 330px;
+        height: 470px;
+        background-color: #15151E;
+        transition: 0.4s;
+        z-index: 99;
+        padding-top: 80px;
+    }
+    .popup.open {
+        top: 0;
+    }
+    .popup .menu-container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(5,1fr);
+        margin: 0;
+    }
+    .popup .menu-team:nth-child(9) {
+        grid-column-start: 1;
+    }
+    .popup .menu-team {
+        margin: 10px;
+        max-width: 135px;    
+    }
+    .hamb-field.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamb-field.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamb-field.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    max-width: 740px;
+}
+
+.pilots-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.pilot-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: larger;
+    border: 1px solid #67676d;
+    margin: 20px 20px;
+    max-width: 330px;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 739px) {
+    .pilot-wrapper {
+        margin-top: 0;
+        min-width: 330px;
+    }
+}
+
+.flag-img {
+    padding: 10px 0px;
+    width: 40px;
+    vertical-align: middle;
+}
+
+.pilot-img {
+    max-width: 300px;
+}
+
+.team-info-container {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    background-color: #15151E;
+    opacity: 90%;
+    text-indent: 25px;
+    max-width: 700px;
+    padding: 10px;
+    margin: 0px 20px;
+}
+
+@media screen and (max-width: 739px) {
+    .team-info-container {
+        max-width: 330px;
+        min-width: 330px; 
+    }
+}
+
+#alfa-romeo {
+    color: #C92D4B;
+}
+
+#alphatauri {
+    color: #5E8FAA;
+}
+
+#alpine {
+    color: #2293D1;
+}
+
+#aston-martin {
+    color: #358C75;
+}
+
+#ferrari {
+    color: #F91536;
+}
+
+#haas {
+    color: #B6BABD;
+}
+
+#mclaren {
+    color: #F58020;
+}
+
+#mercedes {
+    color: #6CD3BF;
+}
+
+#red-bull {
+    color: #3671C6;
+}
+
+#williams {
+    color: #37BEDD;
+}
