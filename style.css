@@ -370,13 +370,13 @@ body::-webkit-scrollbar {
         padding-right: 24px;
     }
     .hamb-field.active .bar:nth-child(2) {
-        display: none;
+        opacity: 0;
     }
     .hamb-field.active .bar:nth-child(1) {
-        transform: translateY(4px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
     }
     .hamb-field.active .bar:nth-child(3) {
-        transform: translateY(-4px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
 
