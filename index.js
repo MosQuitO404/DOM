@@ -98,6 +98,9 @@ class Team {
                 placeholder.innerHTML = '';
                 return placeholder.innerHTML = this.#html;
             }
+            popup.classList.toggle('open');
+            hamb.classList.toggle('active');
+            body.classList.toggle('noscroll')
         }); 
     }
 }
