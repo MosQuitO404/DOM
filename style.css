@@ -174,6 +174,7 @@ body::-webkit-scrollbar {
 }
 
 .menu-team {
+    will-change: transform;
     display: block;
     border: 2px solid #67676d;
     border-top: 0;
@@ -301,6 +302,7 @@ body::-webkit-scrollbar {
 }
 
 .car-img {
+    will-change: transform;
     max-width: 155px;
     position: relative;
     transition: all .2s ease-out;
@@ -328,6 +330,8 @@ body::-webkit-scrollbar {
         cursor: pointer;
     }
     .bar {
+        will-change: transform;
+        will-change: opacity;
         display: block;
         width: 30px;
         height: 3px;
@@ -351,7 +355,7 @@ body::-webkit-scrollbar {
         overflow: auto;
     }
     .popup.open {
-        top: 0;
+        top: 0%;
     }
     .popup .menu-container {
         display: grid;
@@ -363,6 +367,7 @@ body::-webkit-scrollbar {
         grid-column-start: 1;
     }
     .popup .menu-team {
+        will-change: transform;
         margin: 15px 10px;
         max-width: 135px;    
     }
@@ -370,7 +375,7 @@ body::-webkit-scrollbar {
         padding-right: 24px;
     }
     .hamb-field.active .bar:nth-child(2) {
-        opacity: 0;
+        opacity: 0%;
     }
     .hamb-field.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
