@@ -87,6 +87,7 @@ body::-webkit-scrollbar {
         position: fixed;
         top: 0;
         max-width: 362px;
+        min-width: 362px;
         margin-top: 0;
         margin-left: 0;
         margin-right: 0;
@@ -407,6 +408,7 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 760px) {
     .main-container {
         max-width: 360px;
+        min-width: 360px;
     }
     .pilot-wrapper {
         margin-top: 0;
