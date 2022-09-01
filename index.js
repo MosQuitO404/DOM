@@ -103,7 +103,7 @@ class Team {
                 hamb.classList.toggle('active');
                 body.classList.toggle('noscroll')
             }
-            setTimeout(hambClose, 500);
+            setTimeout(hambClose, 600);
         }); 
     }
 }
