@@ -20,12 +20,12 @@ html {
     max-width: 1540px;
 }
 
-/* @media screen and (max-width: 760px) {
+@media screen and (max-width: 760px) {
     html {
         background-image: none;
-        background-color: #1b1b2b;
+        background-color: #15151E;
     }
-} */
+}
 
 body {
     display: flex;
@@ -70,7 +70,7 @@ body::-webkit-scrollbar {
     .header-container {
         flex-basis: 100%;
         margin-bottom: 0;
-        max-width: none;
+        max-width: 100%;
         padding: 0;
     }
 }
@@ -86,6 +86,7 @@ body::-webkit-scrollbar {
     .header-container {
         position: fixed;
         justify-content: space-between;
+        max-width: 100%;
         top: 0;
         left: 0;
         right: 0;
@@ -332,7 +333,7 @@ body::-webkit-scrollbar {
         height: 3px;
         margin: 6px auto;
         background-color: #ffff;
-        transition: 0.2s;
+        transition: 0.5s;
     }
     .popup {
         display: flex;
@@ -347,6 +348,7 @@ body::-webkit-scrollbar {
         opacity: 90%;
         z-index: 99;
         padding-top: 100px;
+        overflow: auto;
     }
     .popup.open {
         top: 0;
@@ -368,13 +370,13 @@ body::-webkit-scrollbar {
         padding-right: 24px;
     }
     .hamb-field.active .bar:nth-child(2) {
-        display: none;
+        opacity: 0;
     }
     .hamb-field.active .bar:nth-child(1) {
-        transform: translateY(4px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
     }
     .hamb-field.active .bar:nth-child(3) {
-        transform: translateY(-4px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
 
@@ -454,8 +456,9 @@ body::-webkit-scrollbar {
     .team-info-container {
         max-width: 360px;
         min-width: 360px;
+        background-color: unset;
         margin-left: 0;
-        margin-right: 0; 
+        margin-right: 0;
     }
 }
 
