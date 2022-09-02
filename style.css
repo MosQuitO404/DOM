@@ -123,7 +123,8 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 760px) {
     .logo-img {
-        margin: 0px 7px 0px 7px;
+        margin-left: 7px;
+        margin-right: 0;
     }
 }
 
@@ -174,7 +175,6 @@ body::-webkit-scrollbar {
 }
 
 .menu-team {
-    will-change: transform;
     display: block;
     border: 2px solid #67676d;
     border-top: 0;
@@ -302,7 +302,6 @@ body::-webkit-scrollbar {
 }
 
 .car-img {
-    will-change: transform;
     max-width: 155px;
     position: relative;
     transition: all .2s ease-out;
@@ -323,21 +322,40 @@ body::-webkit-scrollbar {
     }
     .hamb-wrapper {
         display: flex;
+        justify-content: center;
         align-items: center;
+        width: 80px;
+        height: 80px;
     }
     .hamb-field {
-        padding: 10px 20px;
-        cursor: pointer;
-    }
-    .bar {
-        will-change: transform;
-        will-change: opacity;
-        display: block;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right:0;
         width: 30px;
+        height: 30px;
+        cursor: pointer;
+        z-index: 1;
+        margin: 25px;
+    }
+    .bar,
+    .bar::before,
+    .bar::after {
+        position: absolute;
+        display: block;
+        width: 100%;
         height: 3px;
-        margin: 6px auto;
         background-color: #ffff;
-        transition: .2s;
+        transition: .25s;
+    }
+    .bar::before {
+        content: '';
+        top: -8px;
+    }
+    .bar::after {
+        content: '';
+        top: 8px;
     }
     .popup {
         display: flex;
@@ -349,7 +367,7 @@ body::-webkit-scrollbar {
         height: 100%;
         background-color: #15151E;
         transition: .4s;
-        opacity: 90%;
+        opacity: 95%;
         z-index: 99;
         padding-top: 100px;
         overflow: auto;
@@ -367,21 +385,22 @@ body::-webkit-scrollbar {
         grid-column-start: 1;
     }
     .popup .menu-team {
-        will-change: transform;
         margin: 15px 10px;
         max-width: 135px;    
     }
     .popup .menu-team-img-wrapper {
         padding-right: 24px;
     }
-    .hamb-field.active .bar:nth-child(2) {
-        opacity: 0%;
+    .hamb-field.active .bar {
+        transform: rotate(45deg);
     }
-    .hamb-field.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+    .hamb-field.active .bar::before {
+        top: 0%;
+        transform: rotate(0);
     }
-    .hamb-field.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+    .hamb-field.active .bar::after {
+        top: 0%;
+        transform: rotate(90deg);
     }
 }
 
